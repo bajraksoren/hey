@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Screen with Name</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .name {
+            font-family: "Nunito";
+    font-size: 2rex;
+    font-weight: bold;
+  
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: linear-gradient(rgb(1, 26, 247), rgb(60, 113, 188));
+        }
+        .btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <button id="abc" onclick="addName()">bas tera nam दोहराई</button>
+</div>
+<script>
+    function addName() {
+        const container = document.getElementById("container");
+        const nameElement = document.createElement("div");
+        nameElement.classList.add("name");
+        nameElement.textContent = "mini ❤️";
+        container.appendChild(nameElement);
+    }
+</script>
+<audio id="myAudio" src="./gifs/Mast Magan 2 States 128 Kbps-[AudioTrimmer.com].mp3"></audio>
+
+<button class="btn" onclick="toggleAudio()">want to hear this line</button>
+
+<script>
+    var audio = document.getElementById("myAudio");
+    var isPlaying = false;
+
+    function toggleAudio() {
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        isPlaying = !isPlaying;
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
